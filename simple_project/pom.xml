@@ -113,20 +113,19 @@
 					<plugin>
 						<groupId>org.mule.tools.maven</groupId>
 						<artifactId>mule-maven-plugin</artifactId>
-						<configuration>
-							<cloudHubDeployment>
-								<muleVersion>${mule.version}</muleVersion>
-								<username>Arpita1992</username>
-								<password>Arpita1992</password>
-								<applicationName>simple_project</applicationName>
-								<environment>${cloundhub.env}</environment>
-								<businessGroup>${anypoint.businessGroup}</businessGroup>
-								<region>${cloudhub.region}</region>
-								<uri>https://anypoint.mulesoft.com</uri>;
-								<workerType>${cloudhub.workerType}</workerType>
-								<workers>${cloudhub.workers}</workers>
-							</cloudHubDeployment>
-						</configuration>
+						 <configuration>
+        					<cloudHubDeployment>
+            					<uri>https://anypoint.mulesoft.com</uri>
+            					<muleVersion>${mule.version}</muleVersion>
+            					<username>Arpita1992</username>
+            					<password>Arpita1992</password>
+            					<applicationName>simple_project</applicationName>
+            					<environment>Sandbox</environment>
+            					<properties>
+                					<key>value</key>
+           			 			</properties>
+        					</cloudHubDeployment>
+    					</configuration>
 						<executions>
 							<execution>
 								<id>deploy</id>
