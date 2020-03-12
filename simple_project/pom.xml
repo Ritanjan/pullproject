@@ -22,7 +22,7 @@
 		<cloundhub.env>Sandbox</cloundhub.env>
 		<anypoint.uri>https://anypoint.mulesoft.com</anypoint.uri>
 		<cloudhub.region>us-west-2</cloudhub.region>
-		<anypoint.businessGroup>TEST</anypoint.businessGroup>
+		<anypoint.businessGroup>Support Global\Support EMEA Business Group</anypoint.businessGroup>
 		<cloudhub.workerType>MICRO</cloudhub.workerType>
 		<cloudhub.workers>1</cloudhub.workers>
 	</properties>
@@ -122,7 +122,7 @@
 								<environment>${cloundhub.env}</environment>
 								<businessGroup>${anypoint.businessGroup}</businessGroup>
 								<region>${cloudhub.region}</region>
-								<uri>${anypoint.uri}</uri>
+								<uri>${anypoint.uri}</uri>;
 								<workerType>${cloudhub.workerType}</workerType>
 								<workers>${cloudhub.workers}</workers>
 							</cloudHubDeployment>
