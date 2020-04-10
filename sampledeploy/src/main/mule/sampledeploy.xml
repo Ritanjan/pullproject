@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="2a16abc4-adcc-4687-8466-c53b009d5618" >
+		<http:listener-connection host="localhost" port="8061" />
+	</http:listener-config>
+	<flow name="sampledeployFlow" doc:id="c1617c92-9eb3-4d13-9b83-701936647921" >
+		<http:listener doc:name="Listener" doc:id="3ecd20e3-73d0-43b2-b59e-320ef294ae28" config-ref="HTTP_Listener_config" path="deploytest"/>
+		<ee:transform doc:name="Transform Message" doc:id="86afb863-c7d4-4112-969c-849f2d37cd7a" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	"Name": 'Ritanjan',
+	"Surname": 'Dutta'
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+</mule>
