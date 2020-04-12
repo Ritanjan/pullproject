@@ -3,7 +3,6 @@ pipeline {
    environment {
        ANYPOINT = credentials('ANYPOINT')
    }
-
    stages {
       stage('Build') {
          steps {
@@ -11,6 +10,7 @@ pipeline {
                 sh 'mvn -f sampledeploy/pom.xml clean install'
             }
          }
+		 }
      stage('Deploy') {
          steps {
             withMaven(maven:'maven'){
@@ -19,5 +19,4 @@ pipeline {
          }
       }
    }
-}
 }
