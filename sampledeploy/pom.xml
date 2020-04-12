@@ -36,11 +36,11 @@
 		  <configuration>
 		    <cloudHubDeployment>
 		      <uri>https://anypoint.mulesoft.com</uri>
-		      <muleVersion>${app.runtime}</muleVersion>
-		      <username>${username}</username>
-		      <password>${password}</password>
-		      <applicationName>${cloudhub.application.name}</applicationName>
-		      <environment>${environment}</environment>
+		      <muleVersion>4.2.2</muleVersion>
+		      <username>Arpita011992</username>
+		      <password>Arpita011992</password>
+		      <applicationName>sampleTest010123</applicationName>
+		      <environment>SANDBOX</environment>
 		      <properties>
 		        <key>value</key>
 		      </properties>
