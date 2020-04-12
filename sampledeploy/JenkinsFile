@@ -1,5 +1,8 @@
 pipeline {
    agent any
+   tools {
+        maven 'Maven_3.6.2' 
+    }
    stages {
       stage('Build') {
          steps {
@@ -8,7 +11,7 @@ pipeline {
             }
          }
 		 }
-     stage('Deploy') {
+      stage('Deploy') {
          steps {
             withMaven(maven:'maven'){
                  sh 'mvn -f sampledeploy/pom.xml clean'
