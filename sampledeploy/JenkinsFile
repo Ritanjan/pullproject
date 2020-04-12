@@ -6,16 +6,12 @@ pipeline {
    stages {
       stage('Build') {
          steps {
-            withMaven(maven:'maven'){
-                sh 'mvn -f sampledeploy/pom.xml clean install'
-            }
+            
          }
 		 }
      stage('Deploy') {
          steps {
-            withMaven(maven:'maven'){
-                sh 'mvn -f sampledeploy/pom.xml package deploy -Dusername=Arpita011992 -Dpassword=Arpita011992 -Denviorment=SANDBOX -DmuleDeploy'
-            }
+            
          }
       }
    }
