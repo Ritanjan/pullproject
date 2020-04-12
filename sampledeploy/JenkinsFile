@@ -11,14 +11,14 @@ pipeline {
       stage('Build') {
          steps {
             withMaven(maven:'maven'){
-                sh 'mvn -f sampledeploy/pom.xml clean install'
+                sh 'mvn -f sampledeploy/pom.xml clean'
             }
          }
 		 }
      stage('Deploy') {
          steps {
             withMaven(maven:'maven'){
-                 sh 'mvn -f sampledeploy/pom.xml clean install'
+                 sh 'mvn -f sampledeploy/pom.xml clean'
             }
          }
       }
